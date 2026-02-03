@@ -11,6 +11,8 @@ RUN curl -fsSL https://tailscale.com/install.sh | sh
 RUN curl -fsSL https://bun.sh/install | bash
 ENV PATH="/root/.bun/bin:${PATH}"
 
+RUN apt-get update && apt-get install vim -y
+
 RUN corepack enable
 
 WORKDIR /app
